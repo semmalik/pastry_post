@@ -14,4 +14,12 @@ router.get("/logout", authController.logout);
 router.get("/signup", authController.getSignup);
 router.post("/signup", authController.postSignup);
 
+//navigation
+router.get("/about", homeController.getAbout)
+router.get("/gallery", homeController.getGallery)
+router.get("/testimonials", homeController.getTestimonials)
+router.get("/menu", homeController.getMenu)
+router.get("/messages", homeController.getMessages)
+
+
 module.exports = router;
