@@ -2,6 +2,44 @@
 
 <section class="container">
     <h1>Your orders</h1>
+
+    <ul class="row list-unstyled">
+        <% for(var i=0; i<orders.length; i++) {%>
+          <li class="col-6 justify-content-between mt-5">
+            <span><%=orders[i].cake%> with <%=orders[i].butterCream%> and <%=orders[i].filling%> to be pick up on <%=orders[i].orderPickup%></span>
+          </li>
+        <% } %>
+    </ul>
+
+    <h2><%=user.userName%>'s Orders</h2>
+
+    <form action="/order/createOrder/<%=user._id%>" method="POST">
+        <div class="mb-3">
+            <label for="cake" class="form-label">Cake</label>
+            <input type="text" class="form-control" id="cake" name="cake">
+        </div>
+        <div class="mb-3">
+            <label for="butter_cream" class="form-label">Butter Cream</label>
+            <input type="text" class="form-control" id="butter_cream" name="butter_cream">
+        </div>
+        <div class="mb-3">
+            <label for="filling" class="form-label">Filling</label>
+            <input type="text" class="form-control" id="filling" name="filling">
+        </div>
+        <div class="mb-3">
+            <label for="size" class="form-label">Size</label>
+            <input type="text" class="form-control" id="size" name="size">
+        </div>
+        <div class="mb-3">
+            <label for="orderPickup" class="form-label">Pick Up Date</label>
+            <input type="date" class="form-control" id="orderPickup" name="orderPickup">
+
+        </div>
+        
+        <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
+      </form>
+
+    
 </section>
 
 
