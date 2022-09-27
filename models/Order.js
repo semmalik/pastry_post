@@ -23,6 +23,10 @@ const OrderSchema = new mongoose.Schema({
     },
     orderPickup: {
         type: Date
+    },
+    fulfilled: {
+        type: Boolean,
+        default: false
     }
   });
 

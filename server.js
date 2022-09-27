@@ -10,6 +10,8 @@ const logger = require("morgan");
 const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
 const orderRoutes = require("./routes/orders");
+const adminRoutes = require("./routes/admin");
+
 
 
 //Use .env file in config folder
@@ -57,6 +59,8 @@ app.use(flash());
 //Setup Routes For Which The Server Is Listening
 app.use("/", mainRoutes);
 app.use("/order", orderRoutes);
+app.use("/admin", adminRoutes);
+
 
 //Server Running
 app.listen(process.env.PORT, () => {

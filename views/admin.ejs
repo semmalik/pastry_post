@@ -1,0 +1,18 @@
+<%- include('partials/header') -%>
+
+<section class="container">
+    <h1>Outstanding Orders</h1>
+
+    <ul class="row list-unstyled">
+        <% for(var i=0; i<orders.length; i++) {%>
+          <li class="col-6 justify-content-between mt-5">
+            <span><%=orders[i].cake%> with <%=orders[i].butterCream%> and <%=orders[i].filling%> to be pick up on <%=orders[i].orderPickup%></span>
+          </li>
+        <% } %>
+    </ul>
+
+    
+</section>
+
+
+<%- include('partials/footer') -%>
