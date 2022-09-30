@@ -11,6 +11,17 @@
         <% } %>
     </ul>
 
+    <h1><%=user.userName%>'s Messages</h1>
+
+    <ul class="row list-unstyled">
+        <% for(var i=0; i<messages.length; i++) {%>
+          <li class="col-6 justify-content-between mt-5">
+            <span><%=messages[i].message%></span>
+            <span><%=messages[i].date%></span>
+            <a href="/admin/getMessage/<%=messages[i].customer%>">Reply</a>
+          </li>
+        <% } %>
+    </ul>
     
 </section>
 

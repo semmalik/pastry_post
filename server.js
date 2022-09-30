@@ -11,6 +11,8 @@ const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
 const orderRoutes = require("./routes/orders");
 const adminRoutes = require("./routes/admin");
+const messageRoutes = require("./routes/messages");
+
 
 
 
@@ -60,6 +62,7 @@ app.use(flash());
 app.use("/", mainRoutes);
 app.use("/order", orderRoutes);
 app.use("/admin", adminRoutes);
+app.use("/message", messageRoutes)
 
 
 //Server Running
