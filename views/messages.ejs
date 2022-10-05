@@ -3,15 +3,22 @@
 <section class="container">
     <h1><%=user.userName%>'s Messages</h1>
 
-    <ul class="row list-unstyled">
-        <% for(var i=0; i<messages.length; i++) { %>
-            <li class="col-6 justify-content-between mt-5">
-                <span><%=messages[i].message%></span>
-                <span><%=messages[i].date%></span>
-            </li>
-        <% } %>    
-    </ul>
-    
+    <table>
+        <thead>
+            <tr>
+                <th>Message</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(var i=0; i<messages.length; i++) { %>
+                <tr>
+                    <td><%=messages[i].message%></td>
+                    <td><%=messages[i].date%></td>
+                </tr>
+            <% } %>  
+        </tbody>
+    </table>
 
 
     <form action="/message/createMessage/<%=user._id%>" method="POST">

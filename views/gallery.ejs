@@ -3,17 +3,27 @@
     <section class="container">
         <h2>Our Lastest Creations...</h2>
 
-        <div class="carousel">
-            <a class="carousel-item" href="#one!"><img src="https://picsum.photos/200"></a>
-            <a class="carousel-item" href="#two!"><img src="https://picsum.photos/200"></a>
-            <a class="carousel-item" href="#three!"><img src="https://picsum.photos/200"></a>
-            <a class="carousel-item" href="#four!"><img src="https://picsum.photos/200"></a>
-            <a class="carousel-item" href="#five!"><img src="https://picsum.photos/200"></a>
+        <div class="row">
+            <img class="materialboxed col s4" width="350" src="https://picsum.photos/250" data-caption="photo">
+            <img class="materialboxed col s4" width="350" src="https://picsum.photos/250" data-caption="photo">
+            <img class="materialboxed col s4" width="350" src="https://picsum.photos/250" data-caption="photo">
         </div>
-              
-
-
-
+        <div class="row">
+            <img class="materialboxed col s4" width="350" src="https://picsum.photos/250" data-caption="photo">
+            <img class="materialboxed col s4" width="350" src="https://picsum.photos/250" data-caption="photo">
+            <img class="materialboxed col s4" width="350" src="https://picsum.photos/250" data-caption="photo">
+        </div>
+        <div class="row">
+            <img class="materialboxed col s4" width="350" src="https://picsum.photos/250" data-caption="photo">
+            <img class="materialboxed col s4" width="350" src="https://picsum.photos/250" data-caption="photo">
+            <img class="materialboxed col s4" width="350" src="https://picsum.photos/250" data-caption="photo">
+        </div>
+        <div class="row">
+            <img class="materialboxed col s4" width="350" src="https://picsum.photos/250" data-caption="photo">
+            <img class="materialboxed col s4" width="350" src="https://picsum.photos/250" data-caption="photo">
+            <img class="materialboxed col s4" width="350" src="https://picsum.photos/250" data-caption="photo">
+        </div>
+       
 
     </section>
 
@@ -22,6 +32,11 @@
 
 
 
-
+    <script>
+       document.addEventListener('DOMContentLoaded', function() {
+            const elems = document.querySelectorAll('.materialboxed');
+            const instances = M.Materialbox.init(elems);
+        });
+    </script>
 
 <%- include('partials/footer') -%>

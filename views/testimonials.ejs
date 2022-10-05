@@ -1,4 +1,57 @@
 <%- include('partials/header') -%>
 
-<h1>Testimonials</h1>
+
+<section class="container">
+
+    <div class="carousel">
+        <div class="card cyan lighten-3">
+            <div class="card-content black-text">
+            <span class="card-title">Card Title</span>
+            <p>I am a very simple card. I am good at containing small bits of information.
+            I am convenient because I require little markup to use effectively.</p>
+            </div>
+        </div>
+        <div class="card cyan lighten-3">
+            <div class="card-content black-text">
+            <span class="card-title">Card Title</span>
+            <p>I am a very simple card. I am good at containing small bits of information.
+            I am convenient because I require little markup to use effectively.</p>
+            </div>
+        </div>
+        <div class="card cyan lighten-3">
+            <div class="card-content black-text">
+            <span class="card-title">Card Title</span>
+            <p>I am a very simple card. I am good at containing small bits of information.
+            I am convenient because I require little markup to use effectively.</p>
+            </div>
+        </div>
+        <div class="card cyan lighten-3">
+            <div class="card-content black-text">
+            <span class="card-title">Card Title</span>
+            <p>I am a very simple card. I am good at containing small bits of information.
+            I am convenient because I require little markup to use effectively.</p>
+            </div>
+        </div>
+        <div class="card cyan lighten-3">
+            <div class="card-content black-text">
+            <span class="card-title">Card Title</span>
+            <p>I am a very simple card. I am good at containing small bits of information.
+            I am convenient because I require little markup to use effectively.</p>
+            </div>
+        </div>
+    </div>
+      
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const elems = document.querySelectorAll('.carousel');
+        const instances = M.Carousel.init(elems, {
+            duration: 500,
+            dist: -20,
+            indicators: true
+        });
+    });
+</script>
+
 <%- include('partials/footer') -%>

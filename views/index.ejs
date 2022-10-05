@@ -4,6 +4,24 @@
     <h1>Welcome to Pastry Post</h1>
     <span>Your Local LA Pastry Shop</span>
 
-    </ul>
+    <div class="carousel">
+        <a class="carousel-item" href="#one!"><img src="https://picsum.photos/250">Pic 1</a>
+        <a class="carousel-item" href="#two!"><img src="https://picsum.photos/250">Pic 2</a>
+        <a class="carousel-item" href="#three!"><img src="https://picsum.photos/250">Pic 3</a>
+        <a class="carousel-item" href="#four!"><img src="https://picsum.photos/250">Pic 4</a>
+        <a class="carousel-item" href="#five!"><img src="https://picsum.photos/250">Pic 5</a>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const elems = document.querySelectorAll('.carousel');
+            const instances = M.Carousel.init(elems, {
+                duration: 500,
+                dist: -20,
+                indicators: true
+            });
+        });
+    </script>
 </section>
 <%- include('partials/footer') -%>
