@@ -25,5 +25,32 @@
     
 </section>
 
+<h2>Create a New Cake</h2>
+    <form action="/admin/createCake" method="POST">
+        <div class="input-field">
+          <label for="Name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="cake" name="name">
+        </div>
+        <div class="input-field">
+            <label for="cake" class="form-label">Cake</label>
+            <input type="text" class="form-control" id="cake" name="cake">
+        </div>
+        <div class="input-field">
+            <label for="butter_cream" class="form-label">Butter Cream</label>
+            <input type="text" class="form-control" id="butter_cream" name="butter_cream">
+        </div>
+        <div class="input-field">
+            <label for="filling" class="form-label">Filling</label>
+            <input type="text" class="form-control" id="filling" name="filling">
+        </div>
+        <div class="input-field">
+            <label for="description" class="form-label">Description</label>
+            <input type="text" class="form-control" id="size" name="description">
+        </div>
+        
+        <button type="submit" class="btn btn-primary" value="Upload">Create</button>
+      </form>
+
+
 
 <%- include('partials/footer') -%>

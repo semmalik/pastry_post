@@ -1,6 +1,7 @@
 const Order = require("../models/order");
 const Message = require("../models/Message");
 const User = require("../models/User");
+const Cake = require("../models/cake");
 
 
 module.exports = {
@@ -37,5 +38,22 @@ module.exports = {
         } catch (err) {
             console.log(err)
         }   
+    },
+    createCake: async (req, res) => {
+        try {
+            const cake = await Cake.create(
+                {
+                    name: req.body.name,
+                    cake: req.body.cake,
+                    filling: req.body.filling,
+                    butterCream: req.body.butter_cream,
+                    description: req.body.description,
+                }
+            )
+            console.log(`cake has been created: ${cake}`)
+            res.redirect("/admin")
+        } catch (err) {
+            console.log(err)
+        }
     }
   };
