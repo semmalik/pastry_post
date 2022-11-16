@@ -2,110 +2,21 @@
 
 <section class="container">
     <h2>Our Tastiest Treats...</h2>
-    
-    <div class="row">
-        <div class="col s12 m6">
-        <div class="card cyan lighten-3">
-            <div class="card-content black-text">
-            <span class="card-title">Strawberry Fields</span>
-            <p>Basil cake with fresh strawberry buttercream</p>
-            </div>
-            <div class="card-action">
-            <a href="/order/orders">Order</a>
-            </div>
-        </div>
-        </div>
+
+    <% for(var i=0; i<cakes.length; i++) {%>
         <div class="col s12 m6">
             <div class="card cyan lighten-3">
                 <div class="card-content black-text">
-                <span class="card-title">Card Title</span>
-                <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
+                <span class="card-title"><%=cakes[i].name%></span>
+                <p><%=cakes[i].description%></p>
+                <p>Cake: <%=cakes[i].cake%>  Buttercream: <%=cakes[i].butterCream%>   Filling: <%=cakes[i].filling%></p>
                 </div>
                 <div class="card-action">
-                <a href="/order/orders">Order</a>
+                <a href="#">Order</a>
                 </div>
-            </div>
-            </div>
-    </div>
-    <div class="row">
-        <div class="col s12 m6">
-        <div class="card cyan lighten-3">
-            <div class="card-content black-text">
-            <span class="card-title">Card Title</span>
-            <p>I am a very simple card. I am good at containing small bits of information.
-            I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-            <a href="/order/orders">Order</a>
             </div>
         </div>
-        </div>
-        <div class="col s12 m6">
-            <div class="card cyan lighten-3">
-                <div class="card-content black-text">
-                <span class="card-title">Card Title</span>
-                <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
-                </div>
-                <div class="card-action">
-                <a href="/order/orders">Order</a>
-                </div>
-            </div>
-            </div>
-    </div>
-    <div class="row">
-        <div class="col s12 m6">
-        <div class="card cyan lighten-3">
-            <div class="card-content black-text">
-            <span class="card-title">Card Title</span>
-            <p>I am a very simple card. I am good at containing small bits of information.
-            I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-            <a href="/order/orders">Order</a>
-            </div>
-        </div>
-        </div>
-        <div class="col s12 m6">
-            <div class="card cyan lighten-3">
-                <div class="card-content black-text">
-                <span class="card-title">Card Title</span>
-                <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
-                </div>
-                <div class="card-action">
-                <a href="/order/orders">Order</a>
-                </div>
-            </div>
-            </div>
-    </div>
-    <div class="row">
-        <div class="col s12 m6">
-        <div class="card cyan lighten-3">
-            <div class="card-content black-text">
-            <span class="card-title">Card Title</span>
-            <p>I am a very simple card. I am good at containing small bits of information.
-            I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-            <a href="/order/orders">Order</a>
-            </div>
-        </div>
-        </div>
-        <div class="col s12 m6">
-            <div class="card cyan lighten-3">
-                <div class="card-content black-text">
-                <span class="card-title">Card Title</span>
-                <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
-                </div>
-                <div class="card-action">
-                <a href="/order/orders">Order</a>
-                </div>
-            </div>
-            </div>
-    </div>
+    <% } %>
             
 </section>
 

@@ -26,9 +26,16 @@
 
 
     <h2>Place A New Order</h2>
+
+
+
     <form action="/order/createOrder/<%=user._id%>" method="POST">
         <div class="input-field">
-            <label for="cake" class="form-label">Cake</label>
+            <% if (cake) { %>
+                <label for="cake" class="form-label"><%=cake.cake%>></label>
+            <% } else { %>
+                <label for="cake" class="form-label">Cake</label>
+            <% } %>
             <input type="text" class="form-control" id="cake" name="cake">
         </div>
         <div class="input-field">
