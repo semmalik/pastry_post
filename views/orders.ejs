@@ -24,18 +24,42 @@
         </tbody>
     </table>
 
+    <% if (cake != null) { %>
+        <h2>Order the <%=cake.name%></h2>
+
+        <form action="/order/createOrder/<%=user._id%>" method="POST">
+            <div class="input-field">
+                <label for="cake" class="form-label">Cake</label>
+                <input type="text" class="form-control" id="cake" name="cake" value="<%=cake.cake%>">
+            </div>
+            <div class="input-field">
+                <label for="butter_cream" class="form-label">Butter Cream</label>
+                <input type="text" class="form-control" id="butter_cream" name="butter_cream" value="<%=cake.butterCream%>">
+            </div>
+            <div class="input-field">
+                <label for="filling" class="form-label">Filling</label>
+                <input type="text" class="form-control" id="filling" name="filling" value="<%=cake.filling%>">
+            </div>
+            <div class="input-field">
+                <label for="size" class="form-label">Size</label>
+                <input type="text" class="form-control" id="size" name="size">
+            </div>
+            <div>
+                <label for="orderPickup" class="form-label">Pick Up Date</label>
+                <input type="date" class="form-control" id="orderPickup" name="orderPickup">
+    
+            </div>
+            
+            <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
+          </form>
+
+    <% } else { %>
 
     <h2>Place A New Order</h2>
 
-
-
     <form action="/order/createOrder/<%=user._id%>" method="POST">
         <div class="input-field">
-            <% if (cake) { %>
-                <label for="cake" class="form-label"><%=cake.cake%>></label>
-            <% } else { %>
-                <label for="cake" class="form-label">Cake</label>
-            <% } %>
+            <label for="cake" class="form-label">Cake</label>
             <input type="text" class="form-control" id="cake" name="cake">
         </div>
         <div class="input-field">
@@ -58,6 +82,7 @@
         
         <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
       </form>
+    <% } %>
 
     
 </section>
