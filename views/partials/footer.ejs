@@ -1,4 +1,36 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<!-- For the nav bar -->
+<script>
+    $(".dropdown-trigger").dropdown();
+
+    $(document).ready(function(){
+        $('.sidenav').sidenav();
+    });
+
+</script>
+
+
+<!-- For the carousel -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const elems = document.querySelectorAll('.carousel');
+        const instances = M.Carousel.init(elems, {
+            duration: 500,
+            dist: -20,
+            indicators: true
+        });
+    });
+</script>
+
+<!-- For the gallery -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+         const elems = document.querySelectorAll('.materialboxed');
+         const instances = M.Materialbox.init(elems);
+     });
+ </script>
+        
 </body>
 </html>

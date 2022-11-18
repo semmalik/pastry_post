@@ -11,18 +11,6 @@
         <a class="carousel-item" href="#four!"><img src="https://picsum.photos/250">Pic 4</a>
         <a class="carousel-item" href="#five!"><img src="https://picsum.photos/250">Pic 5</a>
     </div>
-
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const elems = document.querySelectorAll('.carousel');
-            const instances = M.Carousel.init(elems, {
-                duration: 500,
-                dist: -20,
-                indicators: true
-            });
-        });
-    </script>
 </section>
 
 <section id="about" class="container">
@@ -71,10 +59,5 @@
 
 </section>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-         const elems = document.querySelectorAll('.materialboxed');
-         const instances = M.Materialbox.init(elems);
-     });
- </script>
+
 <%- include('partials/footer') -%>
